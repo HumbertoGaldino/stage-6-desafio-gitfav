@@ -3,3 +3,169 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    font-size: 62.5%;
+
+    --bg-color: #000000;
+    --bg-input: #06181C;
+    --bg-button: #065E7C;
+    --bg-table: #092D38;
+
+    --border-tr: #4A808C;
+    --bg-tr: #06161B80;
+    --bg-tr-even: #06181C;
+
+    --tx-remover: #F75A68;
+}
+
+/*Screen Reader Only*/
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap; /*Impede a quebra de linha*/
+}
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif ;
+
+    padding: 10rem 16rem;
+    background-color: var(--bg-color);
+
+    font-size: 1.6rem;
+    
+}
+
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+    margin-bottom: 8rem;
+}
+
+header img{
+    max-width: 18rem;
+}
+
+input[type=text]{
+    width: 46rem;
+    height: 4.8rem;
+    padding: 1.6rem;
+    background-color: var(--bg-input);
+    
+    border: none;
+    border-radius: .5rem;
+
+    color: white;
+}
+
+input[type=button]{
+    max-width: 17rem;
+    height: 4.8rem;
+    padding: 1.2rem 3.2rem;
+
+    border: none;
+    border-radius: .5rem;
+
+    background-color: var(--bg-button);
+    color: white;
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+input[type=button]:hover{
+    background-color: white;
+    color: var(--bg-button);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 1.2rem;
+    overflow: hidden;
+
+    color: white;
+}
+
+thead{
+    border-bottom: none;
+    border-radius: 1rem;
+}
+
+th{
+    padding: 1.6rem 2.4rem;
+    color: white;
+    background-color: var(--bg-table);
+    text-align: left;
+}
+
+th:first-child{
+    min-width: 50rem;
+}
+
+tbody tr{
+    background-color: var(--bg-tr);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg-tr-even);
+}
+
+tbody tr:first-child{
+    border-top: none;
+}
+
+td {
+    text-align: left;
+    padding: 2.4rem;
+}
+
+.user{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 1rem;
+}
+
+.user img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.user a{
+    text-decoration: none;
+    color: white;
+}
+
+.user a p{
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.user a span{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.remove{
+    background-color: transparent;
+    border: none;
+    color: var(--tx-remover);
+    font-weight: 700;
+
+    cursor:pointer
+}
