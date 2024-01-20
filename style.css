@@ -17,6 +17,7 @@
     --bg-tr-even: #06181C;
 
     --tx-remover: #F75A68;
+    --tx-empty: #4E5455; 
 }
 
 /*Screen Reader Only*/
@@ -49,7 +50,7 @@ body{
 header{
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 
     margin-bottom: 8rem;
 }
@@ -58,8 +59,12 @@ header img{
     max-width: 18rem;
 }
 
+#search{
+    width: 60%;
+}
+
 input[type=text]{
-    width: 46rem;
+    width: calc(80% - .25rem);
     height: 4.8rem;
     padding: 1.6rem;
     background-color: var(--bg-input);
@@ -71,9 +76,10 @@ input[type=text]{
 }
 
 input[type=button]{
-    max-width: 17rem;
+    width: calc(20% - .25rem);
     height: 4.8rem;
-    padding: 1.2rem 3.2rem;
+    padding: 1.2rem;
+    text-align: center;
 
     border: none;
     border-radius: .5rem;
@@ -90,6 +96,10 @@ input[type=button]:hover{
     color: var(--bg-button);
 }
 
+#app{
+    width: 100%;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -100,6 +110,7 @@ table {
 }
 
 thead{
+    width: 100%;
     border-bottom: none;
     border-radius: 1rem;
 }
@@ -109,10 +120,6 @@ th{
     color: white;
     background-color: var(--bg-table);
     text-align: left;
-}
-
-th:first-child{
-    min-width: 50rem;
 }
 
 tbody tr{
@@ -141,8 +148,8 @@ td {
 }
 
 .user img{
-    width: 56px;
-    height: 56px;
+    width: 5.6rem;
+    height: 5.6rem;
     border-radius: 50%;
 }
 
@@ -168,4 +175,24 @@ td {
     font-weight: 700;
 
     cursor:pointer
+}
+
+.empty{
+    height: 40rem;   
+}
+
+.empty div{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.empty p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--tx-empty);
 }
